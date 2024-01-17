@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .background {
+    background-color: hsl(0, 0%, 0%);
+  }
+
+
+  /* start navbar section */
+
+header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 28px 12%;
+    padding-right: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .logo {
+    font-family: "Clicker Script", cursive;
+    font-size: 3.7rem;
+    color: hsl(204, 6%, 84%);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .logo > span {
+    color: hsl(0, 68%, 52%);
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .menu-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar > li {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+  }
+  
+  .navbar > li > a {
+    font-size: 1.1rem;
+    color: hsl(200, 16%, 96%);
+  }
+  
+  .navbar > li > a:hover {
+    color: hsl(351, 94%, 58%);
+  }
+  
+  .navbar > li > a.active {
+    color: (265, 65%, 39%);
+  }
+  
+  #menu-icon {
+    font-size: 35px;
+    color: aliceblue;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+  }
+  
+  /* start navbar responsive */
+  
+  @media (max-width: 1024px) {
+    .logo {
+      font-size: 3rem;
+    }
+  
+    .navbar > li {
+      padding: 17px;
+    }
+  
+    .navbar > li > a {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 769px) {
+    #menu-icon {
+      display: block;
+    }
+  
+    .navbar {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 270px;
+      height: fit-content;
+      background-color: hsl(0, 68%, 41%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar a {
+      display: block;
+      margin: 12px;
+      padding: 0px 25px;
+      transition: all 0.5s ease;
+    }
+  
+    .navbar a:hover {
+      color: hsl(351, 94%, 58%);
+      transform: translateY(5px);
+    }
+  
+    .navbar a.active {
+      color: (265, 65%, 39%);
+    }
+  
+    .navbar.open {
+      right: 2%;
+    }
+  
+    header {
+      padding-left: 15px;
+    }
+  }
+  
+  /* End navbar responsive */
+  
+  /* End navbar section */
